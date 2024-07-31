@@ -42,10 +42,23 @@ namespace QLNhanSu_He2024
         {
             cmd = new SqlCommand(sql, cnn);
             cmd.Parameters.Clear();
-            for (int i = 0; i < value.Length; i++)
-                cmd.Parameters.AddWithValue(name[i], value[i]);
-
+            if (value!=null)
+            {
+                for (int i = 0; i < value.Length; i++)
+                    cmd.Parameters.AddWithValue(name[i], value[i]);
+            }    
             cmd.ExecuteNonQuery();//Thực thi câu lệnh Insert, Delete, Update
+            cmd.Dispose();
+        }
+
+        //Kiểm tra khóa chính có trùng
+        public static int checkData(string sql)
+        {
+            int i = 0;
+            cmd = new SqlCommand(sql, cnn);
+             i = (int)cmd.ExecuteScalar();
+            cmd.Dispose();
+            return i;
         }
 
     }

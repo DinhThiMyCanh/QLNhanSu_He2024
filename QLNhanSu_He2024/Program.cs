@@ -16,7 +16,7 @@ namespace QLNhanSu_He2024
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNhanVien());
+            Application.Run(new frmMain());
         }
     }
 }

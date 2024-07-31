@@ -55,11 +55,15 @@ namespace QLNhanSu_He2024
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
+            this.btnTimNV = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -239,7 +243,7 @@ namespace QLNhanSu_He2024
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Location = new System.Drawing.Point(49, 326);
+            this.groupBox2.Location = new System.Drawing.Point(49, 419);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(969, 254);
             this.groupBox2.TabIndex = 1;
@@ -255,6 +259,7 @@ namespace QLNhanSu_He2024
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(874, 198);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox3
             // 
@@ -263,16 +268,16 @@ namespace QLNhanSu_He2024
             this.groupBox3.Controls.Add(this.btnXoa);
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Controls.Add(this.btnThem);
-            this.groupBox3.Location = new System.Drawing.Point(98, 586);
+            this.groupBox3.Location = new System.Drawing.Point(1056, 45);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(831, 73);
+            this.groupBox3.Size = new System.Drawing.Size(190, 332);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(681, 30);
+            this.btnThoat.Location = new System.Drawing.Point(40, 265);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(123, 37);
             this.btnThoat.TabIndex = 4;
@@ -281,45 +286,73 @@ namespace QLNhanSu_He2024
             // 
             // btnLamMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(542, 29);
+            this.btnLamMoi.Location = new System.Drawing.Point(40, 216);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(113, 37);
+            this.btnLamMoi.Size = new System.Drawing.Size(122, 37);
             this.btnLamMoi.TabIndex = 3;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(408, 30);
+            this.btnXoa.Location = new System.Drawing.Point(36, 161);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(111, 36);
+            this.btnXoa.Size = new System.Drawing.Size(126, 36);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(277, 30);
+            this.btnSua.Location = new System.Drawing.Point(37, 112);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(110, 37);
+            this.btnSua.Size = new System.Drawing.Size(125, 37);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(130, 30);
+            this.btnThem.Location = new System.Drawing.Point(36, 61);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(126, 37);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnTimNV);
+            this.groupBox5.Controls.Add(this.txtTenNV);
+            this.groupBox5.Location = new System.Drawing.Point(74, 345);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(918, 68);
+            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tìm kiếm";
+            // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Location = new System.Drawing.Point(312, 27);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(285, 35);
+            this.txtTenNV.TabIndex = 0;
+            // 
+            // btnTimNV
+            // 
+            this.btnTimNV.Location = new System.Drawing.Point(678, 27);
+            this.btnTimNV.Name = "btnTimNV";
+            this.btnTimNV.Size = new System.Drawing.Size(200, 35);
+            this.btnTimNV.TabIndex = 1;
+            this.btnTimNV.Text = "Tìm tên NV";
+            this.btnTimNV.UseVisualStyleBackColor = true;
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1091, 658);
+            this.ClientSize = new System.Drawing.Size(1328, 658);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -334,6 +367,8 @@ namespace QLNhanSu_He2024
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -366,6 +401,9 @@ namespace QLNhanSu_He2024
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnTimNV;
+        private System.Windows.Forms.TextBox txtTenNV;
     }
 }
 
